@@ -23,6 +23,9 @@
 
 //CODE HERE
 
+const greetUser = username => `Welcome back, ${username}`
+
+// console.log(greetUser('Juan'))
 
 
 
@@ -51,7 +54,16 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
+const canWeDeliver = zipCode => {
+    if(deliveryAreaZipCodes.includes(zipCode) === true) {
+        return "You're in our delivery zone!"
+    } {
+        return "Sorry, we can't deliver to that address"
+    }
+}
 
+// console.log(canWeDeliver(34714))
+// console.log(canWeDeliver(85205))
 
 /* 
     Problem 2 Continued
@@ -72,6 +84,18 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 // CODE HERE
 
+const canWeDeliverTwo = (arr, zipCode) => {
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] === zipCode) {
+            return "You're in our delivery zone!"
+        }
+    } {
+        return "Sorry, we can't deliver to that address"
+    }
+}
+
+// console.log(canWeDeliverTwo(deliveryAreaZipCodes, 347174))
+// console.log(canWeDeliverTwo(deliveryAreaZipCodes, 85205))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -108,7 +132,8 @@ const deals = [
 
 //CODE HERE
 
-
+let newDeal = deals[0].title.replace('15', '10')
+console.log(newDeal)
 
 /*
     The restaurant is going to continue its
@@ -124,3 +149,6 @@ const deals = [
 */
 
 //CODE HERE
+
+let dealExtension = deals[1].desc.replace('March', 'April').trim()
+console.log(dealExtension)
