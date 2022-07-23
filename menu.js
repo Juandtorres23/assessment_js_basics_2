@@ -22,7 +22,7 @@
     Make sure that you give your properties values
     of the correct data type.
 
-    Note: the category is something like appetizer/entree,
+    Note: the category is something like appetizer/entree,m
     the popularity is an overall ranking, the
     rating is an average of all customer ratings, and
     for the tags, think of things that a
@@ -32,6 +32,14 @@
 
 //CODE HERE
 
+const pizza = {
+    name: 'Cheese',
+    price: 12.99,
+    category: 'entree',
+    popularity: 8,
+    rating: 10,
+    tags: ['tasty', 'simple', 'cheesy']
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,6 +52,7 @@
 
 //CODE HERE
 
+// console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -54,6 +63,7 @@
 
 //CODE HERE
 
+// console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -64,6 +74,8 @@
 
 //CODE HERE
 
+// pizza.price = 13.99
+// console.log(pizza.price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +85,8 @@
 */
 
 //CODE HERE
-
+// pizza.category = 'kids'
+// console.log(pizza.category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -89,6 +102,58 @@
 
 //CODE HERE
 
+const foodArr = [ { 
+    name: 'Cheese Pizza',
+    price: 12.99,
+    category: 'entree',
+    popularity: 9,
+    rating: 10,
+    tags: ['tasty', 'simple', 'cheesy']
+
+},
+
+{ 
+
+    name: 'Pasta',
+    price: 15.99,
+    category: 'entree',
+    popularity: 8,
+    rating: 9,
+    tags: ['tasty', 'creamy', 'hot']
+
+},
+
+{ 
+
+    name: 'Calamari',
+    price: 8.75,
+    category: 'appetizer',
+    popularity: 6,
+    rating: 7,
+    tags: ['crispy', 'hot', 'fresh']
+
+},
+
+{
+
+    name: 'House Salad',
+    price: 10.99,
+    category: 'salad',
+    popularity: 5,
+    rating: 7,
+    tags: ['fresh', 'tasty', 'big portion']
+},
+
+{
+    name: 'Tiramisu',
+    price: 7.99,
+    category: 'desert',
+    popularity: 10,
+    rating: 10,
+    tags: ['tasty', 'creamy', 'sweat']
+}
+
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,7 +170,8 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(object => object.tags.includes('fresh'))
+console.log(filteredFood)
 
 
 
@@ -150,7 +216,15 @@
 
 //CODE HERE
 
-
+const filterByProperty = (property, num, type) => {
+    let filteredArr                                                              //foodArr.property  
+    if(foodArr.property <= num && type === 'above') {
+        return 
+    } else if {
+        return
+    }
+}
+                                                                                /// return filterArr
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.

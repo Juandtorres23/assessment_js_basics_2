@@ -35,7 +35,9 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const cartTotal = cart.reduce((acc, curr) => acc + curr.price, 0)
+
+console.log(cartTotal)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -55,8 +57,9 @@ const cart = [
 
 //CODE HERE
 
+const calcFinalPrice = (total, couponValue, tax) => ((total * (tax + 1)) - couponValue)
 
-
+console.log(calcFinalPrice(cartTotal, 5, .07))
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -80,6 +83,29 @@ const cart = [
 /*
     TEXT ANSWER HERE
 
+-first name // assuming that you are purchasing anything, you need a name for the order and to better communicate with the customers and to store it in the files under something 
+    //it will be a string since names are writen as strings
+-last name // the same goes for last name// could be together with first name as "name" 
+
+
+-email // there should be an email for electronic reciept, verification of order, and posible promotions 
+    // this should also be a string with special characters to make sure it is a valid email address
+
+-phone number // should be provided for call back purposes only, incase there was something wrong with the order and/or any problems.
+    //this will be a string for storage purposes, no need to do any math
+
+-date of bith // should be porvided to verify age is over 18 
+    //this will be stored as a string for more consistensy 
+
+const customers = {
+    fullName: "Johnny Johnson",
+    phone: "3214545454",
+    email: "Johnny.johnson@gmail.com",
+    date of birth: "01/20/1976",
+}
+
+
+
 */
 
 /*
@@ -88,3 +114,10 @@ const cart = [
 */
 
 //CODE HERE
+
+const customers = {
+    fullName: 'Juan Torres Reyes',
+    phone: '4077778969',
+    email: 'Juan.Torres@gmail.com',
+    dateOfBirth: '08/27/1998'
+} 
