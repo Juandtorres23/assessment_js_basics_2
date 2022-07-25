@@ -237,3 +237,5 @@ const filterByProperty = (property, num, type) => {
 //CODE HERE
 
 console.log(filterByProperty('price', 10, 'above'))
+
+// completed assessment 
