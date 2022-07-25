@@ -171,7 +171,7 @@ const foodArr = [ {
 //CODE HERE
 
 const filteredFood = foodArr.filter(object => object.tags.includes('fresh'))
-console.log(filteredFood)
+// console.log(filteredFood)
 
 
 
@@ -217,14 +217,16 @@ console.log(filteredFood)
 //CODE HERE
 
 const filterByProperty = (property, num, type) => {
-    let filteredArr                                                              //foodArr.property  
-    if(foodArr.property <= num && type === 'above') {
-        return 
-    } else if {
-        return
-    }
+    let filteredArr = foodArr.filter((object) => {
+        if(type === 'above') {
+            return object[property] > num
+        } else if(type === 'below') {
+            return object[property] < num
+        }         
+     }) 
+     return filteredArr                                                                                    //foodArr.property  
 }
-                                                                                /// return filterArr
+                                                                                              /// return filterArr
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
@@ -233,3 +235,5 @@ const filterByProperty = (property, num, type) => {
 */
 
 //CODE HERE
+
+console.log(filterByProperty('price', 10, 'above'))
