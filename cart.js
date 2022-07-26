@@ -121,3 +121,4 @@ const customers = {
     email: 'Juan.Torres@gmail.com',
     dateOfBirth: '08/27/1998'
 } 
+// cart completed 
